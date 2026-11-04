@@ -35,7 +35,7 @@ counts = {"CpG": Counter(), "non-CpG": Counter()}
 for base, state in zip(dNA_bases, hidden_states):
     counts[state][base] += 1 
 
-#print(counts)
+print(counts)
 
 #A, T, C, G Probs for CpG and A, T, C, G Probs for non-CpG  
 
@@ -50,6 +50,13 @@ for state, count in counts.items():
 
 for state in emission:
     print(state, emission[state])
+
+emission_probability = { 
+    "CpG": {"A": 0.1881, "T": 0.1842, "C": 0.3266, "G": 0.3011},
+    "non-CpG": {"A": 0.2917, "T": 0.3011, "C": 0.2026, "G": 0.2046}
+}
+
+
 
 
 
