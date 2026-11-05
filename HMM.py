@@ -56,7 +56,17 @@ emission_probability = {
     "non-CpG": {"A": 0.2917, "T": 0.3011, "C": 0.2026, "G": 0.2046}
 }
 
+###### Transition Proabability ######
+transition = {}
+for current_state, next_state in zip(hidden_states[:-1], hidden_states[1:]):
+    # initialize count for all possible transitions
+    if (current_state, next_state) not in transition:
+        transition[(current_state, next_state)] = 1 
 
+    else: 
+        transition[(current_state, next_state)] += 1
+  
+print (transition)
 
 
 
