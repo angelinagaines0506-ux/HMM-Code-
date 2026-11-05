@@ -18,7 +18,7 @@ def pull_data(path):
 
 extracted_observations, extracted_hidden_states = pull_data("mm39ExtendedDNAOutput.txt")
 
-print(extracted_observations)
+#print(extracted_observations)
 #print(extracted_hidden_states)
 
 
